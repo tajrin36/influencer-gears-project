@@ -41,11 +41,11 @@
   font-size: 1.5rem;
   color: rgba(58, 58, 58, 1);
 }
-.shopping-cart{
+.shopping-cart {
   position: relative;
   /* border: 1px solid black; */
 }
-.black-spot{
+.black-spot {
   /* border: 1px solid black; */
   height: 5px;
   width: 5px;
@@ -54,7 +54,6 @@
   position: absolute;
   top: -2.5px;
   right: 29px;
-  
 }
 /* banner styles */
 .banner-container {
@@ -100,10 +99,33 @@
 .banner-sites {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  padding: 70px;
+  padding: 20px;
+  /* border: 1px solid rgb(170, 170, 170),
+  Linear gradient
+  rgba(192, 204, 218, 0.1),rgba(192, 204, 218, 0.6),rgba(192, 204, 218, 0.1); */
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    rgba(192, 204, 218, 0.1),
+    rgba(192, 204, 218, 0.6),
+    rgba(192, 204, 218, 0.1)
+  );
+  border-image-slice: 1;
 }
-.hide{
-    display: none;
+/* collection section */
+.collection{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.rating{
+  height: 10px;
+  width: 10px;
+}
+.hide {
+  display: none;
 }
 
 /* media queries for small device */
@@ -123,11 +145,11 @@
   }
   .banner-sites {
     grid-template-columns: repeat(4, 1fr);
-   padding: 0px;
-   align-items: center;
-   justify-content: center;
+    padding: 0px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
   }
- 
 }
 
 /* media queries for medium device */
@@ -135,5 +157,11 @@
   .banner-container {
     gap: 60px;
     margin-left: 30px;
+  }
+  .banner-sites {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
   }
 }
